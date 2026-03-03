@@ -3,24 +3,28 @@ cask "hashi" do
   name "hashi"
   desc "Git worktree + tmux session manager"
   homepage "https://github.com/wasabi0522/hashi"
-  version "0.0.5"
+  version "0.0.6"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "hashi"
+  depends_on formula: [
+      "git",
+      "tmux",
+    ]
 
   on_macos do
     on_intel do
       url "https://github.com/wasabi0522/hashi/releases/download/v#{version}/hashi_darwin_amd64.tar.gz",
         verified: "github.com/wasabi0522/hashi"
-      sha256 "943796760f531700dbf7260b90e1f2097d40231f306e5cbc03082095304cd180"
+      sha256 "6b373646fea329a920ecbc9d5f339d29a47dc3673233c05f0bc13f78795a1fd9"
     end
     on_arm do
       url "https://github.com/wasabi0522/hashi/releases/download/v#{version}/hashi_darwin_arm64.tar.gz",
         verified: "github.com/wasabi0522/hashi"
-      sha256 "111a917b265fa0430d1e974af3030aad5b1ecfd5c4d4af4072b34797cf309b8e"
+      sha256 "4a659c052383ddc98088c3e869da5208ff1683e003ac3851c9419694ceb541bb"
     end
   end
 
@@ -28,12 +32,12 @@ cask "hashi" do
     on_intel do
       url "https://github.com/wasabi0522/hashi/releases/download/v#{version}/hashi_linux_amd64.tar.gz",
         verified: "github.com/wasabi0522/hashi"
-      sha256 "351e760f40bebb28fb4df37ee340fba5eeedc005475fcf5fc3e50c1ba3b3562c"
+      sha256 "5ba9b9a1114d72b6f54dfd4c1a8be423f7b6d902d9ac951a5f557b747b56a4fd"
     end
     on_arm do
       url "https://github.com/wasabi0522/hashi/releases/download/v#{version}/hashi_linux_arm64.tar.gz",
         verified: "github.com/wasabi0522/hashi"
-      sha256 "d8b69a2c8e426ea54334560577e746496924a8aaee025d34b918deb7f6a18468"
+      sha256 "0b26a590d2d328e79ecadcf7c9794420ba608ffe78c4eff7fa8b1874007549f4"
     end
   end
 
